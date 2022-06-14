@@ -47,5 +47,33 @@
     "title": "Remove NA",
     "section": "Warum braucht es dieses Projekt?",
     "text": "Warum braucht es dieses Projekt?\nDaten, Informationen und Wissen zur queeren Geschichte sollten existieren. Nur so kann queere Geschichte in den komplexeren, datenbasierten Algorithmen sichtbar werden, die zunehmend Teil unseres Alltags sind. Das Projekt Remove NA sammelt, integriert und veröffentlicht Daten zur LGBTIQ*-Geschichte. Fokus ist dabei München, geht aber auch darüber hinaus."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Über das Projekt",
+    "section": "",
+    "text": "Queere Geschichte wurde lange Zeit von großen Archiven eher ignoriert und kaum strukturiert erfasst, v.a. nicht außerhalb des Narrativs der Perversion oder Kriminalisierung. Das Forum München dokumentiert seit mehr als 20 Jahren die LGBTIQ*-Geschichte und liefert so queeren Kontext zu Personen, Organisationen, Ereignissen, Orten, Zeitpunkten – bislang vor allem im analogen Raum.\nIm Digitalen fehlen diese Zusammenhänge weiterhin. Mein Projekt habe ich deshalb Remove NA genannt. Die englische Abkürzung NA steht für „not available” und wird verwendet, wenn Informationen nicht verfügbar sind.\nDaten zur Geschichte von nicht-heterosexuellen Menschen sind häufig NA und das, was die nigerianische Künstlerin Mimi Onuoha als „missing data” bezeichnet: “Missing impliziert sowohl einen Mangel als auch ein Sollen: etwas fehlt, sollte aber existieren.”\nDaten, Informationen und Wissen zur queeren Geschichte sollten existieren. Nur so kann queere Geschichte in den komplexeren, datenbasierten Algorithmen sichtbar werden, die zunehmend Teil unseres Alltags sind. Diese Technologien setzen direkt auf Quellen wie etwa Wikidata auf. Fehlt dort queere Geschichte, dann fehlt sie in den Anwendungen, die darauf aufbauen und wir benutzen."
+  },
+  {
+    "objectID": "about.html#ein-positiv-um-das-negativ-aufleuchten-zu-lassen",
+    "href": "about.html#ein-positiv-um-das-negativ-aufleuchten-zu-lassen",
+    "title": "Über das Projekt",
+    "section": "Ein Positiv, um das Negativ, aufleuchten zu lassen",
+    "text": "Ein Positiv, um das Negativ, aufleuchten zu lassen\nUm mit maschineller Hilfe fehlende Daten aufzuspüren, braucht es ein Positiv (den Knowledge Graph zur LGBTIQ*-Geschichte), um durch einen Abgleich mit Linked-Open-Data wie GND oder WikiData das Negativ (die Leerstellen) aufleuchten zu lassen.\nDie so identifizierten Personen, Ereignisse oder Orte, die sich bisher nicht in Wikidata finden lassen, können dann in das System offener digitaler Informationen eingewebt werden, um die Vergangenheit für die Zukunft zu erhalten. Die Daten, die es dafür braucht, können auf Grund knapper Ressourcen nur mit Data Science erkämpft werden. Das möchte ich in den kommenden Monaten tun. Die Vision von „Remove NA“: LGBTIQ*-Geschichte als offene, verlinkte Daten."
+  },
+  {
+    "objectID": "data-modeling.html",
+    "href": "data-modeling.html",
+    "title": "data modeling",
+    "section": "",
+    "text": "The linked data that I am mining in my Remove NA project will reside in Factgrid, a wikibase instance for historians.\nSo after I cleaned the data from various sources, I had to align my relational data to Factgrid’s data model.\nIn this post, I’ll share some insights during the process."
+  },
+  {
+    "objectID": "data-modeling.html#on-sex-and-gender",
+    "href": "data-modeling.html#on-sex-and-gender",
+    "title": "data modeling",
+    "section": "On Sex and Gender",
+    "text": "On Sex and Gender\nThis is a tough one, when dealing with data on queer history. Because it’s not just another data field, but the core of the movement and central point of personal identity.\nFor example the gender question.\nSince I am working in the LGBTIQ* sphere this a quite important question. Using automated gender detections is risky and may result in quite a lot of false positives or general misclassifications.\nFactgrid has an implemented mechanism to get the sex or gender from a list of names. It remsembles other APIs that want to derive the gender from first names. It probably works well in many cases, but there are also seemingly infinite pitfalls:\n\nFirst names that aren’t in the data\nFirst names used across genders, think of Kim, Sasha etc.\nHow can a first name be determined in the first place? An easy one, right? Take the string up to the first space. Taking the string up to the first space is of course the obvious idea. Like most obvious ideas, it falls short.\nWhat if data entry was not consistent and the last name comes first?\n\n\nCatharina Margaretha Linck\nFor example Catharina Margaretha Linck: Linck was the last person in Germany sentenced to death due to her sexual orientation as well as her appearance. Throughout her life, Linck has repeatedly changed her appearance: Sometimes she was under a male name and dress, sometimes as a woman. Was she a lesbian? Was she trans? We will never know.\nBut what we know is that we was definitly not strictly one or the other.\nLinck’s case is a good example of how the view of people like Linck is changing.\nThe author Angela Steidele (German Wikipedia) has published two books about Linck. The first in 2004, the second almost 20 years later in 2021. In an interview with queer.de, Steidele tells us that she has come to interpret the sources primarily as evidence of lesbian desire.\n\nTrans people receive the life of Catharina Linck differently than I do. Although I see the lesbian in her as a lesbian, I have been more linguistically mindful that trans people legitimately recognize a trans person here. For this reason, I deliberately left it more open in the narrative style of the rewrite as to who he/she actually was. It was narrative intent that the change of gender also be reflected linguistically, and therefore I wrote of a man when Catharina Linck was recognizable to others as a man. Nevertheless, inconsistencies occur through quotations, so that between “he” and “she” the gender of the person appears as fluid. This fluidity opens up more room for interpretation and identification and also makes Linck a very modern figure.\n\nIn Lincks Wikidata Items the sex and gender item says transgender male.\nIf she was a lesbian using male appearance to live her life or if he was trans we will never know for certain and is part of interpretation.\nAdmittedly, this case is outstandingly complicated, but it illustrates the issue well.\n\n\nMy procedure\nMy decision was to fetch the sex or gender information from Wikidata if I have the external ID for an entity.\nThe rest was manually assigned.\nI know, that this might produces some false positives.\n\n\nFactgrid Data Modeling!"
   }
 ]
