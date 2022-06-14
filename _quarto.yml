@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Remove NA"
+  navbar:
+    background: light
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: Über das Projekt
+      - href: companions.qmd
+        text: Wegefährt*innen
+
+format:
+  html:
+    theme: cosmo
+     # - custom.scss

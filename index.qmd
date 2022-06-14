@@ -1,0 +1,36 @@
+---
+title: "Remove NA"
+subtitle: "Strukturierte Daten zur queeren Geschichte"
+---
+
+Remove NA fasst Daten zur LGBTIQ*-Geschichte in einer einheitlichen Datenbank zusammen, um sie leichter zugänglich und nützlicher zu machen. Mehr darüber, warum wir Remove NA aufbauen. 
+
+## Erkunde die Daten
+
+
+<div class="alert alert-primary">
+  <strong>Die Weggefährten von Magnus Hirschfeld</strong>
+</div>
+
+<div class="alert alert-secondary">
+  <strong>Chronik queerer Geschichte</strong> mit Fokus auf München
+</div>
+
+
+<div class="alert alert-info">
+  <strong>Autonome Frauenbewegung</strong>
+</div>
+
+<div class="alert alert-success">
+  <strong>Beziehungsgeflecht:</strong> Welche Personen waren in welchen Organisationen aktiv?
+</div>
+
+## Warum braucht es dieses Projekt?
+
+Daten, Informationen und Wissen zur queeren Geschichte sollten existieren. 
+Nur so kann queere Geschichte in den komplexeren, datenbasierten Algorithmen sichtbar werden, die zunehmend Teil unseres Alltags sind.
+Das Projekt Remove NA sammelt, integriert und veröffentlicht Daten zur LGBTIQ*-Geschichte.
+Fokus ist dabei München, geht aber auch darüber hinaus.
+
+
+

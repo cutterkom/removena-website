@@ -1,0 +1,20 @@
+---
+title: "Über das Projekt"
+editor: visual
+---
+
+## Queere Geschichte fehlt 
+
+Queere Geschichte wurde lange Zeit von großen Archiven eher ignoriert und kaum strukturiert erfasst, v.a. nicht außerhalb des Narrativs der Perversion oder Kriminalisierung. Das Forum München dokumentiert seit mehr als 20 Jahren die LGBTIQ\*-Geschichte und liefert so queeren Kontext zu Personen, Organisationen, Ereignissen, Orten, Zeitpunkten -- bislang vor allem im analogen Raum.
+
+Im Digitalen fehlen diese Zusammenhänge weiterhin. Mein Projekt habe ich deshalb Remove NA genannt. [Die englische Abkürzung *NA*](https://de.wikipedia.org/wiki/N/A) steht für „not available" und wird verwendet, wenn Informationen nicht verfügbar sind.
+
+Daten zur Geschichte von nicht-heterosexuellen Menschen sind häufig NA und das, was die nigerianische [Künstlerin Mimi Onuoha als „missing data" bezeichnet](https://mimionuoha.com/the-library-of-missing-datasets): "Missing impliziert sowohl einen Mangel als auch ein Sollen: etwas fehlt, sollte aber existieren."
+
+Daten, Informationen und Wissen zur queeren Geschichte sollten existieren. Nur so kann queere Geschichte in den komplexeren, datenbasierten Algorithmen sichtbar werden, die zunehmend Teil unseres Alltags sind. Diese Technologien setzen direkt auf Quellen wie etwa Wikidata auf. Fehlt dort queere Geschichte, dann fehlt sie in den Anwendungen, die darauf aufbauen und wir benutzen.
+
+## Ein Positiv, um das Negativ, aufleuchten zu lassen
+
+Um mit maschineller Hilfe fehlende Daten aufzuspüren, braucht es ein Positiv (den Knowledge Graph zur LGBTIQ*-Geschichte), um durch einen Abgleich mit Linked-Open-Data wie GND oder WikiData das Negativ (die Leerstellen) aufleuchten zu lassen. 
+
+Die so identifizierten Personen, Ereignisse oder Orte, die sich bisher nicht in Wikidata finden lassen, können dann in das System offener digitaler Informationen eingewebt werden, um die Vergangenheit für die Zukunft zu erhalten. Die Daten, die es dafür braucht, können auf Grund knapper Ressourcen nur mit Data Science erkämpft werden. Das möchte ich in den kommenden Monaten tun. Die Vision von „Remove NA“: LGBTIQ*-Geschichte als offene, verlinkte Daten.
