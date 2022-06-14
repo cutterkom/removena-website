@@ -1,0 +1,8 @@
+connection:
+  quickstatements_url: "https://database.factgrid.de/quickstatements/"
+  api_username:  "Katharina Brunner"
+  api_token: "$2y$10$sZqLZ3rwMtebHZktneERZuJxquO5yfTZQb/aUukxB9HrMlimEkwsu"
+  sparql_endpoint: "https://database.factgrid.de/sparql"
+connection_wikidata:
+  api_username:  "removena"
+api_token: "$2y$10$xc7I9OYaPcKQSkKX3LwHleLValHewmNhS8hUTg4Q6kHo0fkMnjony"
