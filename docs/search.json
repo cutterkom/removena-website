@@ -1,31 +1,24 @@
 [
   {
-    "objectID": "companions.html",
-    "href": "companions.html",
-    "title": "Die Weggefährt*innen",
+    "objectID": "stock-taking.html",
+    "href": "stock-taking.html",
+    "title": "Bestandsaufnahme",
     "section": "",
-    "text": "Alle Personen, die sich in diesem Datensatz zur queeren Geschichte befinden, existierten nicht in einem Vakuum (well, anderes Wort) / alleine. Sie waren umgeben mit anderen Menschen, die sie liebten, mit denen sie zusammengearbeitet haben, von denen sie verfolgt wurden.\nDurch strukturierte Daten lassen sich diese Geflechte (anderes Wort, weil Chart kein Netzwerk) aufzeigen."
+    "text": "Um mit maschineller Hilfe fehlende Daten aufzuspüren, braucht es ein Positiv (den Knowledge Graph zur LGBTIQ*-Geschichte), um durch einen Abgleich mit Linked-Open-Data wie WikiData das Negativ (die Leerstellen) aufleuchten zu lassen.\nDieses Positiv ist in Factgrid gespeichert, einer Datenbank für Historiker*innen.\n\n\n\n\nAnzahl der Objekten und Verbindungen in Factgrid\n\n\nTyp\nAnzahl 31. Mai 2022\nAnzahl 2022-06-14\n\n\n\n\nObjekt\n7170\n7178\n\n\nVerbindungen\n34902\n35358\n\n\n\nZeichnet man alle Verbindungen, kommt man bei diesem Bild raus:"
   },
   {
-    "objectID": "companions.html#magnus-hirschfeld",
-    "href": "companions.html#magnus-hirschfeld",
-    "title": "Die Weggefährt*innen",
-    "section": "Magnus Hirschfeld",
-    "text": "Magnus Hirschfeld\nMagnus Hirschfeld gehört zu den prominentesten Personen der ersten Schwulenbewegung. Er war 1897 Mitgründer der ersten schwulen Interessensvertretung, dem Wissenschaftlich-humanitären Komitee, leitete das Institut für Sexualwissenschaft, das in , reiste für Vorträge um die Welt.\nDoch es war nicht einfach: Schon 1921 wurde er in München von Nazis zusammengeschlagen, 1933 war das Institut für Sexualwissenschaft eines der ersten Ziele der Nazis nach der Machtübernahme. Sie haben es angezündet, es brannte nieder. Hirschfeld floh ins Ausland."
+    "objectID": "stock-taking.html#lücken-auffüllen",
+    "href": "stock-taking.html#lücken-auffüllen",
+    "title": "Bestandsaufnahme",
+    "section": "Lücken auffüllen",
+    "text": "Lücken auffüllen\nDas Ziel ist es ja, fehlende Daten – die NAs – zu finden und wenn möglich aufzufüllen. Die Zieldatenbank ist Wikidata. Wikidata ist der wichtigste Datenumschlagplatz in der digitalen Welt. Dort werden strukturiert Daten zu allen möglichen Konzepten, Personen, Orten und was auch immer erfasst. Diese Objekte nennt man auch Entitäten. Alle Entitäten können auch mit vielen anderen Datensätzen verknüpft werden – wie Factgrid.\nQueere Geschichte, ihre Akteure und Schauplätze, sollen also in Wikidata oder mit Wikidata verbunden werden."
   },
   {
-    "objectID": "companions.html#anita-augspurg",
-    "href": "companions.html#anita-augspurg",
-    "title": "Die Weggefährt*innen",
-    "section": "Anita Augspurg",
-    "text": "Anita Augspurg"
-  },
-  {
-    "objectID": "companions.html#erika-mann",
-    "href": "companions.html#erika-mann",
-    "title": "Die Weggefährt*innen",
-    "section": "Erika Mann",
-    "text": "Erika Mann"
+    "objectID": "stock-taking.html#weiterführende-links",
+    "href": "stock-taking.html#weiterführende-links",
+    "title": "Bestandsaufnahme",
+    "section": "Weiterführende Links",
+    "text": "Weiterführende Links\n\nStatus Update: How much data?\nVom Rechner in die Welt: Notizen zum ersten großen Import in Factgrid"
   },
   {
     "objectID": "index.html",
@@ -77,24 +70,31 @@
     "text": "On Sex and Gender\nThis is a tough one, when dealing with data on queer history. Because it’s not just another data field, but the core of the movement and central point of personal identity.\nFor example the gender question.\nSince I am working in the LGBTIQ* sphere this a quite important question. Using automated gender detections is risky and may result in quite a lot of false positives or general misclassifications.\nFactgrid has an implemented mechanism to get the sex or gender from a list of names. It remsembles other APIs that want to derive the gender from first names. It probably works well in many cases, but there are also seemingly infinite pitfalls:\n\nFirst names that aren’t in the data\nFirst names used across genders, think of Kim, Sasha etc.\nHow can a first name be determined in the first place? An easy one, right? Take the string up to the first space. Taking the string up to the first space is of course the obvious idea. Like most obvious ideas, it falls short.\nWhat if data entry was not consistent and the last name comes first?\n\n\nCatharina Margaretha Linck\nFor example Catharina Margaretha Linck: Linck was the last person in Germany sentenced to death due to her sexual orientation as well as her appearance. Throughout her life, Linck has repeatedly changed her appearance: Sometimes she was under a male name and dress, sometimes as a woman. Was she a lesbian? Was she trans? We will never know.\nBut what we know is that we was definitly not strictly one or the other.\nLinck’s case is a good example of how the view of people like Linck is changing.\nThe author Angela Steidele (German Wikipedia) has published two books about Linck. The first in 2004, the second almost 20 years later in 2021. In an interview with queer.de, Steidele tells us that she has come to interpret the sources primarily as evidence of lesbian desire.\n\nTrans people receive the life of Catharina Linck differently than I do. Although I see the lesbian in her as a lesbian, I have been more linguistically mindful that trans people legitimately recognize a trans person here. For this reason, I deliberately left it more open in the narrative style of the rewrite as to who he/she actually was. It was narrative intent that the change of gender also be reflected linguistically, and therefore I wrote of a man when Catharina Linck was recognizable to others as a man. Nevertheless, inconsistencies occur through quotations, so that between “he” and “she” the gender of the person appears as fluid. This fluidity opens up more room for interpretation and identification and also makes Linck a very modern figure.\n\nIn Lincks Wikidata Items the sex and gender item says transgender male.\nIf she was a lesbian using male appearance to live her life or if he was trans we will never know for certain and is part of interpretation.\nAdmittedly, this case is outstandingly complicated, but it illustrates the issue well.\n\n\nMy procedure\nMy decision was to fetch the sex or gender information from Wikidata if I have the external ID for an entity.\nThe rest was manually assigned.\nI know, that this might produces some false positives.\n\n\nFactgrid Data Modeling!"
   },
   {
-    "objectID": "stock-taking.html",
-    "href": "stock-taking.html",
-    "title": "Bestandsaufnahme",
+    "objectID": "companions.html",
+    "href": "companions.html",
+    "title": "Die Weggefährt*innen",
     "section": "",
-    "text": "Um mit maschineller Hilfe fehlende Daten aufzuspüren, braucht es ein Positiv (den Knowledge Graph zur LGBTIQ*-Geschichte), um durch einen Abgleich mit Linked-Open-Data wie WikiData das Negativ (die Leerstellen) aufleuchten zu lassen.\nDieses Positiv ist in Factgrid gespeichert, einer Datenbank für Historiker*innen.\n\n\n\n\nAnzahl der Objekten und Verbindungen in Factgrid\n\n\nTyp\nAnzahl 31. Mai 2022\nAnzahl 2022-06-14\n\n\n\n\nObjekt\n7170\n7178\n\n\nVerbindungen\n34902\n35358\n\n\n\nZeichnet man alle Verbindungen, kommt man bei diesem Bild raus:"
+    "text": "Alle Personen, die sich in diesem Datensatz zur queeren Geschichte befinden, existierten nicht in einem Vakuum (well, anderes Wort) / alleine. Sie waren umgeben mit anderen Menschen, die sie liebten, mit denen sie zusammengearbeitet haben, von denen sie verfolgt wurden.\nDurch strukturierte Daten lassen sich diese Geflechte (anderes Wort, weil Chart kein Netzwerk) aufzeigen."
   },
   {
-    "objectID": "stock-taking.html#weiterführende-links",
-    "href": "stock-taking.html#weiterführende-links",
-    "title": "Bestandsaufnahme",
-    "section": "Weiterführende Links",
-    "text": "Weiterführende Links\n\nStatus Update: How much data?\nVom Rechner in die Welt: Notizen zum ersten großen Import in Factgrid"
+    "objectID": "companions.html#magnus-hirschfeld",
+    "href": "companions.html#magnus-hirschfeld",
+    "title": "Die Weggefährt*innen",
+    "section": "Magnus Hirschfeld",
+    "text": "Magnus Hirschfeld\nMagnus Hirschfeld gehört zu den prominentesten Personen der ersten Schwulenbewegung. Er war 1897 Mitgründer der ersten schwulen Interessensvertretung, dem Wissenschaftlich-humanitären Komitee, leitete das Institut für Sexualwissenschaft, das in , reiste für Vorträge um die Welt.\nDoch es war nicht einfach: Schon 1921 wurde er in München von Nazis zusammengeschlagen, 1933 war das Institut für Sexualwissenschaft eines der ersten Ziele der Nazis nach der Machtübernahme. Sie haben es angezündet, es brannte nieder. Hirschfeld floh ins Ausland."
   },
   {
-    "objectID": "stock-taking.html#lücken-auffüllen",
-    "href": "stock-taking.html#lücken-auffüllen",
-    "title": "Bestandsaufnahme",
-    "section": "Lücken auffüllen",
-    "text": "Lücken auffüllen\nDas Ziel ist es ja, fehlende Daten – die NAs – zu finden und wenn möglich aufzufüllen. Die Zieldatenbank ist Wikidata. Wikidata ist der wichtigste Datenumschlagplatz in der digitalen Welt. Dort werden strukturiert Daten zu allen möglichen Konzepten, Personen, Orten und was auch immer erfasst. Diese Objekte nennt man auch Entitäten. Alle Entitäten können auch mit vielen anderen Datensätzen verknüpft werden – wie Factgrid.\nQueere Geschichte, ihre Akteure und Schauplätze, sollen also in Wikidata oder mit Wikidata verbunden werden."
+    "objectID": "companions.html#anita-augspurg",
+    "href": "companions.html#anita-augspurg",
+    "title": "Die Weggefährt*innen",
+    "section": "Anita Augspurg",
+    "text": "Anita Augspurg"
+  },
+  {
+    "objectID": "companions.html#erika-mann",
+    "href": "companions.html#erika-mann",
+    "title": "Die Weggefährt*innen",
+    "section": "Erika Mann",
+    "text": "Erika Mann"
   }
 ]
