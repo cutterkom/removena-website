@@ -1,6 +1,10 @@
 ---
 title: "Remove NA"
 subtitle: "Strukturierte Daten zur queeren Geschichte"
+execute:
+  echo: false
+  message: false
+  warning: false
 ---
 
 Remove NA fasst Daten zur LGBTIQ*-Geschichte in einer einheitlichen Datenbank zusammen, um sie leichter zugänglich und nützlicher zu machen. Mehr darüber, warum wir Remove NA aufbauen. 
@@ -33,4 +37,27 @@ Das Projekt Remove NA sammelt, integriert und veröffentlicht Daten zur LGBTIQ*-
 Fokus ist dabei München, geht aber auch darüber hinaus.
 
 
+## NAs removed
 
+```{r}
+config_file <- "static/config.yml"
+config <- yaml::read_yaml(config_file)
+
+na_removed_wikidata <- nrow(readr::read_delim(url(config$revisions_github)))
+```
+
+
+```{=html}
+<div class="card bg-light mb-3" style="max-width: 20rem;">
+  <div class="card-header bg-light">Wikidata</div>
+  <div class="card-body">
+    <h2 class="card-title">`r as.character(na_removed_wikidata)`</h2>
+    <p class="card-text">Lücken zur queeren Geschichte in <strong>Wikidata</strong> entfernt.</p>
+  </div>
+   <div class="card-footer text-muted bg-light">
+    Stand: `r Sys.Date()`
+  </div>
+</div>
+
+```
+---

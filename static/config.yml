@@ -6,3 +6,5 @@ connection:
 connection_wikidata:
   api_username:  "removena"
 api_token: "$2y$10$xc7I9OYaPcKQSkKX3LwHleLValHewmNhS8hUTg4Q6kHo0fkMnjony"
+revisions_sheet: "1zQ2CO6fkKUg4RFN8TACOxa2ZnSg2F45saBwDNphlzGY"
+revisions_github: "https://raw.githubusercontent.com/cutterkom/remove-na-lgbtiq-queer-knowledge-graph/main/data-publishing/wikidata/data/revisions.csv"

@@ -12,7 +12,7 @@ website:
         text: Home
       - href: about.qmd
         text: Über das Projekt
-      - href: stock-taking.qmd
+      - href: tracking.qmd
         text: Stand
       - href: companions.qmd
         text: Wegefährt*innen

@@ -1,0 +1,103 @@
+---
+title: "Bestandsaufnahme"
+editor: visual
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+## Queere Geschichte als offene Daten
+
+Um mit maschineller Hilfe fehlende Daten aufzuspüren, braucht es ein Positiv (den Knowledge Graph zur LGBTIQ\*-Geschichte), um durch einen Abgleich mit Linked-Open-Data wie [WikiData](https://wikidata.org) das Negativ (die Leerstellen) aufleuchten zu lassen.
+
+Dieses Positiv ist in [Factgrid](https://database.factgrid.de/wiki/FactGrid:Remove_NA:_A_LGBTIQ*-Knowledge_Graph) gespeichert, einer Datenbank für Historiker\*innen.
+
+```{r}
+
+library(tidyverse)
+library(kabrutils)
+library(SPARQL)
+library(tidywikidatar)
+
+config_file <- "static/config.yml"
+config <- yaml::read_yaml(config_file)
+
+# fetch all items from RemoveNA Project and get the statement count
+query <- '
+SELECT DISTINCT ?item ?itemLabel ?statementcount
+WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  ?item wdt:P131 wd:Q400012 .
+  ?item wikibase:statements ?statementcount.
+}'
+
+query_res <- query %>%
+  sparql_to_tibble(endpoint = config$connection$sparql_endpoint)
+
+# Number of items ---------------------------------------------------------
+
+nr_of_items <- length(unique(query_res$item))
+
+# Number of relations -----------------------------------------------------
+
+gross_relations <- sum(query_res$statementcount)
+
+# redundandt: 4098 for works (posters/books)
+redundant_works <- 4098
+
+# minus 3 meta data items per item
+netto_relations <- gross_relations - (nr_of_items*3) - redundant_works
+```
+
+| Typ          | Anzahl 31. Mai 2022 | Anzahl `r Sys.Date()`             |
+|--------------|---------------------|-----------------------------------|
+| Objekt       | 7170                | `r nr_of_items`                   |
+| Verbindungen | 34902               | `r as.character(netto_relations)` |
+
+: Anzahl der Objekten und Verbindungen in Factgrid
+
+Zeichnet man alle Verbindungen, kommt man bei diesem Bild raus:
+
+![](https://katharinabrunner.de/wp-content/uploads/2022/05/full-network-big.png)
+
+## Lücken auffüllen
+
+Das Ziel ist es ja, fehlende Daten -- die `NA`s -- zu finden und wenn möglich aufzufüllen. Die Zieldatenbank ist Wikidata. **Wikidata ist der wichtigste Datenumschlagplatz in der digitalen Welt**. Dort werden strukturiert Daten zu allen möglichen Konzepten, Personen, Orten und was auch immer erfasst. Diese Objekte nennt man auch Entitäten. Alle Entitäten können auch mit vielen anderen Datensätzen verknüpft werden -- wie Factgrid.
+
+Queere Geschichte, ihre Akteure und Schauplätze, sollen also in Wikidata oder mit Wikidata verbunden werden.
+
+Alle Wikiprojekte führen detailliert Buch darüber, wer was wann wie verändert. Auch RemoveNA können [die letzten 500 Veränderungen eingesehen werden](https://www.wikidata.org/wiki/Special:Contributions/Removena). Diese Daten kann ich auch in eine Grafik packen:
+
+```{r}
+revisions <- read_delim(url(config$revisions_github))
+
+```
+
+```{r}
+count_per_date <- revisions %>% 
+  count(date, sort = T)
+
+count_per_date %>% 
+  ggplot(aes(x = date, y = n)) +
+  geom_col() +
+  theme_minimal() +
+  labs(title = "Anzahl der Veränderungen in Wikidata",
+       subtitle = "Account: Removena", 
+       x = "Anzahl",
+       y = "Datum", 
+       caption = Sys.Date())
+```
+
+Als Tabelle (Stand: `r Sys.Date()`):
+
+```{r}
+revisions %>% 
+  select(date, item = title, label_en, label_de, comment) %>% 
+  DT::datatable()
+```
+
+## Weiterführende Links
+
+-   [Status Update: How much data?](https://katharinabrunner.de/wp-content/uploads/2022/05/status-update/index.html)
+-   [Vom Rechner in die Welt: Notizen zum ersten großen Import in Factgrid](https://katharinabrunner.de/2022/05/vom-rechner-in-die-welt-notizen-zum-ersten-grossen-import-in-factgrid/)

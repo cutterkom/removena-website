@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Remove NA - Bestandsaufnahme</title>
+<title>Remove NA - data modeling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,7 +77,7 @@ ul.task-list{list-style: none;}
     <a class="nav-link" href="./about.html">Über das Projekt</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./stock-taking.html" aria-current="page">Stand</a>
+    <a class="nav-link" href="./tracking.html">Stand</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./companions.html">Wegefährt*innen</a>
@@ -98,7 +98,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bestandsaufnahme</h1>
+<h1 class="title">data modeling</h1>
 </div>
 
 
@@ -114,51 +114,48 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<section id="queere-geschichte-als-offene-daten" class="level2">
-<h2 class="anchored" data-anchor-id="queere-geschichte-als-offene-daten">Queere Geschichte als offene Daten</h2>
-<p>Um mit maschineller Hilfe fehlende Daten aufzuspüren, braucht es ein Positiv (den Knowledge Graph zur LGBTIQ*-Geschichte), um durch einen Abgleich mit Linked-Open-Data wie <a href="https://wikidata.org">WikiData</a> das Negativ (die Leerstellen) aufleuchten zu lassen.</p>
-<p>Dieses Positiv ist in <a href="https://database.factgrid.de/wiki/Main_Page">Factgrid</a> gespeichert, einer Datenbank für Historiker*innen.</p>
-<div class="cell">
-
-</div>
-<table class="table">
-<caption>Anzahl der Objekten und Verbindungen in Factgrid</caption>
-<thead>
-<tr class="header">
-<th>Typ</th>
-<th>Anzahl 31. Mai 2022</th>
-<th>Anzahl 2022-06-14</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Objekt</td>
-<td>7170</td>
-<td>7178</td>
-</tr>
-<tr class="even">
-<td>Verbindungen</td>
-<td>34902</td>
-<td>35358</td>
-</tr>
-</tbody>
-</table>
-<p>Zeichnet man alle Verbindungen, kommt man bei diesem Bild raus:</p>
-<p><img src="https://katharinabrunner.de/wp-content/uploads/2022/05/full-network-big.png" class="img-fluid"></p>
-</section>
-<section id="lücken-auffüllen" class="level2">
-<h2 class="anchored" data-anchor-id="lücken-auffüllen">Lücken auffüllen</h2>
-<p>Das Ziel ist es ja, fehlende Daten – die <code>NA</code>s – zu finden und wenn möglich aufzufüllen. Die Zieldatenbank ist Wikidata. <strong>Wikidata ist der wichtigste Datenumschlagplatz in der digitalen Welt</strong>. Dort werden strukturiert Daten zu allen möglichen Konzepten, Personen, Orten und was auch immer erfasst. Diese Objekte nennt man auch Entitäten. Alle Entitäten können auch mit vielen anderen Datensätzen verknüpft werden – wie Factgrid.</p>
-<p>Queere Geschichte, ihre Akteure und Schauplätze, sollen also in Wikidata oder mit Wikidata verbunden werden.</p>
-</section>
-<section id="weiterführende-links" class="level2">
-<h2 class="anchored" data-anchor-id="weiterführende-links">Weiterführende Links</h2>
+<p>The linked data that I am mining in my Remove NA project will reside in Factgrid, a wikibase instance for historians.</p>
+<p>So after I cleaned the data from various sources, I had to align my relational data to Factgrid’s data model.</p>
+<p>In this post, I’ll share some insights during the process.</p>
+<section id="on-sex-and-gender" class="level2">
+<h2 class="anchored" data-anchor-id="on-sex-and-gender">On Sex and Gender</h2>
+<p>This is a tough one, when dealing with data on queer history. Because it’s not just another data field, but the core of the movement and central point of personal identity.</p>
+<p>For example the gender question.</p>
+<p>Since I am working in the LGBTIQ* sphere this a quite important question. Using automated gender detections is risky and may result in quite a lot of false positives or general misclassifications.</p>
+<p>Factgrid has an implemented mechanism to get the sex or gender from a list of names. It remsembles other APIs that want to derive the gender from first names. It probably works well in many cases, but there are also seemingly infinite pitfalls:</p>
 <ul>
-<li><a href="https://katharinabrunner.de/wp-content/uploads/2022/05/status-update/index.html">Status Update: How much data?</a></li>
-<li><a href="https://katharinabrunner.de/2022/05/vom-rechner-in-die-welt-notizen-zum-ersten-grossen-import-in-factgrid/">Vom Rechner in die Welt: Notizen zum ersten großen Import in Factgrid</a></li>
+<li>First names that aren’t in the data</li>
+<li>First names used across genders, think of <code>Kim</code>, <code>Sasha</code> etc.</li>
+<li>How can a first name be determined in the first place? An easy one, right? Take the string up to the first space. Taking the string up to the first space is of course the obvious idea. Like most obvious ideas, it falls short.</li>
+<li>What if data entry was not consistent and the last name comes first?</li>
 </ul>
+<section id="catharina-margaretha-linck" class="level3">
+<h3 class="anchored" data-anchor-id="catharina-margaretha-linck">Catharina Margaretha Linck</h3>
+<p>For example <a href="https://en.wikipedia.org/wiki/Catharina_Margaretha_Linck">Catharina Margaretha Linck</a>: Linck was the last person in Germany sentenced to death due to her sexual orientation as well as her appearance. Throughout her life, Linck has repeatedly changed her appearance: Sometimes she was under a male name and dress, sometimes as a woman. Was she a lesbian? Was she trans? We will never know.</p>
+<p>But what we know is that we was definitly not strictly one or the other.</p>
+<p>Linck’s case is a good example of how the view of people like Linck is changing.</p>
+<p>The author <a href="https://de.wikipedia.org/wiki/Angela_Steidele">Angela Steidele (German Wikipedia)</a> has published two books about Linck. The first in 2004, the second almost 20 years later in 2021. In an <a href="https://www.queer.de/detail.php?article_id=40408">interview with queer.de</a>, Steidele tells us that she has come to interpret the sources primarily as evidence of lesbian desire.</p>
+<blockquote class="blockquote">
+<p>Trans people receive the life of Catharina Linck differently than I do. Although I see the lesbian in her as a lesbian, I have been more linguistically mindful that trans people legitimately recognize a trans person here. For this reason, I deliberately left it more open in the narrative style of the rewrite as to who he/she actually was. It was narrative intent that the change of gender also be reflected linguistically, and therefore I wrote of a man when Catharina Linck was recognizable to others as a man. Nevertheless, inconsistencies occur through quotations, so that between “he” and “she” the gender of the person appears as fluid. This fluidity opens up more room for interpretation and identification and also makes Linck a very modern figure.</p>
+</blockquote>
+<p>In <a href="https://www.wikidata.org/wiki/Q1050792">Lincks Wikidata Items</a> the sex and gender item says <code>transgender male</code>.</p>
+<p>If she was a lesbian using male appearance to live her life or if he was trans we will never know for certain and is part of interpretation.</p>
+<p>Admittedly, this case is outstandingly complicated, but it illustrates the issue well.</p>
+</section>
+<section id="my-procedure" class="level3">
+<h3 class="anchored" data-anchor-id="my-procedure">My procedure</h3>
+<p>My decision was to fetch the <code>sex or gender</code> information from Wikidata if I have the external ID for an entity.</p>
+<p>The rest was manually assigned.</p>
+<p>I know, that this might produces some false positives.</p>
+</section>
+<section id="factgrid-data-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="factgrid-data-modeling">Factgrid Data Modeling!</h3>
+<p><a href="images/paste-478B4FA0.png"></a></p>
+<iframe style="width: 80vw; height: 50vh; border: none;" src="https://database.factgrid.de/query/embed.html#SELECT%20%3FGeschlechtsidentit_t%20%3FGeschlechtsidentit_tLabel%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3FGeschlechtsidentit_t%20wdt%3AP2%20wd%3AQ402121.%0A%7D%0ALIMIT%20100" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups">
+</iframe>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
