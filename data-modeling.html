@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Remove NA - data modeling</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Remove NA</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">Über das Projekt</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./tracking.html">Stand</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./companions.html">Wegefährt*innen</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">data modeling</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>The linked data that I am mining in my Remove NA project will reside in Factgrid, a wikibase instance for historians.</p>
+<p>So after I cleaned the data from various sources, I had to align my relational data to Factgrid’s data model.</p>
+<p>In this post, I’ll share some insights during the process.</p>
+<section id="on-sex-and-gender" class="level2">
+<h2 class="anchored" data-anchor-id="on-sex-and-gender">On Sex and Gender</h2>
+<p>This is a tough one, when dealing with data on queer history. Because it’s not just another data field, but the core of the movement and central point of personal identity.</p>
+<p>For example the gender question.</p>
+<p>Since I am working in the LGBTIQ* sphere this a quite important question. Using automated gender detections is risky and may result in quite a lot of false positives or general misclassifications.</p>
+<p>Factgrid has an implemented mechanism to get the sex or gender from a list of names. It remsembles other APIs that want to derive the gender from first names. It probably works well in many cases, but there are also seemingly infinite pitfalls:</p>
+<ul>
+<li>First names that aren’t in the data</li>
+<li>First names used across genders, think of <code>Kim</code>, <code>Sasha</code> etc.</li>
+<li>How can a first name be determined in the first place? An easy one, right? Take the string up to the first space. Taking the string up to the first space is of course the obvious idea. Like most obvious ideas, it falls short.</li>
+<li>What if data entry was not consistent and the last name comes first?</li>
+</ul>
+<section id="catharina-margaretha-linck" class="level3">
+<h3 class="anchored" data-anchor-id="catharina-margaretha-linck">Catharina Margaretha Linck</h3>
+<p>For example <a href="https://en.wikipedia.org/wiki/Catharina_Margaretha_Linck">Catharina Margaretha Linck</a>: Linck was the last person in Germany sentenced to death due to her sexual orientation as well as her appearance. Throughout her life, Linck has repeatedly changed her appearance: Sometimes she was under a male name and dress, sometimes as a woman. Was she a lesbian? Was she trans? We will never know.</p>
+<p>But what we know is that we was definitly not strictly one or the other.</p>
+<p>Linck’s case is a good example of how the view of people like Linck is changing.</p>
+<p>The author <a href="https://de.wikipedia.org/wiki/Angela_Steidele">Angela Steidele (German Wikipedia)</a> has published two books about Linck. The first in 2004, the second almost 20 years later in 2021. In an <a href="https://www.queer.de/detail.php?article_id=40408">interview with queer.de</a>, Steidele tells us that she has come to interpret the sources primarily as evidence of lesbian desire.</p>
+<blockquote class="blockquote">
+<p>Trans people receive the life of Catharina Linck differently than I do. Although I see the lesbian in her as a lesbian, I have been more linguistically mindful that trans people legitimately recognize a trans person here. For this reason, I deliberately left it more open in the narrative style of the rewrite as to who he/she actually was. It was narrative intent that the change of gender also be reflected linguistically, and therefore I wrote of a man when Catharina Linck was recognizable to others as a man. Nevertheless, inconsistencies occur through quotations, so that between “he” and “she” the gender of the person appears as fluid. This fluidity opens up more room for interpretation and identification and also makes Linck a very modern figure.</p>
+</blockquote>
+<p>In <a href="https://www.wikidata.org/wiki/Q1050792">Lincks Wikidata Items</a> the sex and gender item says <code>transgender male</code>.</p>
+<p>If she was a lesbian using male appearance to live her life or if he was trans we will never know for certain and is part of interpretation.</p>
+<p>Admittedly, this case is outstandingly complicated, but it illustrates the issue well.</p>
+</section>
+<section id="my-procedure" class="level3">
+<h3 class="anchored" data-anchor-id="my-procedure">My procedure</h3>
+<p>My decision was to fetch the <code>sex or gender</code> information from Wikidata if I have the external ID for an entity.</p>
+<p>The rest was manually assigned.</p>
+<p>I know, that this might produces some false positives.</p>
+</section>
+<section id="factgrid-data-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="factgrid-data-modeling">Factgrid Data Modeling!</h3>
+<p><a href="images/paste-478B4FA0.png"></a></p>
+<iframe style="width: 80vw; height: 50vh; border: none;" src="https://database.factgrid.de/query/embed.html#SELECT%20%3FGeschlechtsidentit_t%20%3FGeschlechtsidentit_tLabel%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3FGeschlechtsidentit_t%20wdt%3AP2%20wd%3AQ402121.%0A%7D%0ALIMIT%20100" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups">
+</iframe>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
