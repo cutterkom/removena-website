@@ -11,7 +11,7 @@
     "href": "tracking.html#lücken-auffüllen",
     "title": "Bestandsaufnahme",
     "section": "Lücken auffüllen",
-    "text": "Lücken auffüllen\nDas Ziel ist es ja, fehlende Daten – die NAs – zu finden und wenn möglich aufzufüllen. Die Zieldatenbank ist Wikidata. Wikidata ist der wichtigste Datenumschlagplatz in der digitalen Welt. Dort werden strukturiert Daten zu allen möglichen Konzepten, Personen, Orten und was auch immer erfasst. Diese Objekte nennt man auch Entitäten. Alle Entitäten können auch mit vielen anderen Datensätzen verknüpft werden – wie Factgrid.\nQueere Geschichte, ihre Akteure und Schauplätze, sollen also in Wikidata oder mit Wikidata verbunden werden.\nAlle Wikiprojekte führen detailliert Buch darüber, wer was wann wie verändert. Auch RemoveNA können die letzten 500 Veränderungen eingesehen werden. Diese Daten kann ich auch in eine Grafik packen:\n\n\n\n\n\n\n\n\nAls Tabelle (Stand: 2022-07-22):"
+    "text": "Lücken auffüllen\nDas Ziel ist es ja, fehlende Daten – die NAs – zu finden und wenn möglich aufzufüllen. Die Zieldatenbank ist Wikidata. Wikidata ist der wichtigste Datenumschlagplatz in der digitalen Welt. Dort werden strukturiert Daten zu allen möglichen Konzepten, Personen, Orten und was auch immer erfasst. Diese Objekte nennt man auch Entitäten. Alle Entitäten können auch mit vielen anderen Datensätzen verknüpft werden – wie Factgrid.\nQueere Geschichte, ihre Akteure und Schauplätze, sollen also in Wikidata oder mit Wikidata verbunden werden.\nAlle Wikiprojekte führen detailliert Buch darüber, wer was wann wie verändert. Auch RemoveNA können die letzten 500 Veränderungen eingesehen werden. Diese Daten kann ich auch in eine Grafik packen:\n\n\n\n\n\n\n\n\nAls Tabelle (Stand: 2022-07-22), die letzten 500 Einträge:"
   },
   {
     "objectID": "tracking.html#weiterführende-links",
@@ -46,7 +46,7 @@
     "href": "index.html#nas-removed",
     "title": "Remove NA",
     "section": "NAs removed",
-    "text": "NAs removed\n\n\n\n\n  Wikidata\n  \n    215\n    Lücken zur queeren Geschichte in Wikidata entfernt.\n  \n   \n    Stand: 2022-07-22"
+    "text": "NAs removed\n\n\n\n\n  Wikidata\n  \n    9003\n    Lücken zur queeren Geschichte in Wikidata entfernt.\n  \n   \n    Stand: 2022-07-22"
   },
   {
     "objectID": "about.html",
