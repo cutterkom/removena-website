@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://cutterkom.github.io/removena-website/test-person.html</loc>
+    <lastmod>2022-07-29T09:58:57.616Z</lastmod>
+  </url>
+  <url>
     <loc>https://cutterkom.github.io/removena-website/tracking.html</loc>
-    <lastmod>2022-07-22T15:04:36.542Z</lastmod>
+    <lastmod>2022-07-29T09:59:14.938Z</lastmod>
   </url>
   <url>
     <loc>https://cutterkom.github.io/removena-website/index.html</loc>
-    <lastmod>2022-07-22T15:04:39.097Z</lastmod>
+    <lastmod>2022-07-29T09:59:19.490Z</lastmod>
   </url>
   <url>
     <loc>https://cutterkom.github.io/removena-website/about.html</loc>
-    <lastmod>2022-07-22T15:04:39.475Z</lastmod>
+    <lastmod>2022-07-29T09:59:19.868Z</lastmod>
   </url>
   <url>
     <loc>https://cutterkom.github.io/removena-website/data-modeling.html</loc>
-    <lastmod>2022-07-22T15:04:39.830Z</lastmod>
+    <lastmod>2022-07-29T09:59:20.220Z</lastmod>
   </url>
   <url>
     <loc>https://cutterkom.github.io/removena-website/companions.html</loc>
-    <lastmod>2022-07-22T15:04:40.268Z</lastmod>
+    <lastmod>2022-07-29T09:59:20.542Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cutterkom.github.io/removena-website/nationalsozialismus.html</loc>
+    <lastmod>2022-07-29T09:59:20.989Z</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Remove NA - Nationalsozialismus: Verfolgung und Gedenken</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Nationalsozialismus: Verfolgung und Gedenken</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Remove NA</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Allgemein</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Remove NA</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">Über das Projekt</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tracking.html" class="sidebar-item-text sidebar-link">Bestandsaufnahme</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data-modeling.html" class="sidebar-item-text sidebar-link">data modeling</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Themen</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nationalsozialismus.html" class="sidebar-item-text sidebar-link active">Nationalsozialismus: Verfolgung und Gedenken</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./companions.html" class="sidebar-item-text sidebar-link">Die Weggefährt*innen</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ns-verfolgungsopfer-und-ihre-wohnorte-in-münchen" id="toc-ns-verfolgungsopfer-und-ihre-wohnorte-in-münchen" class="nav-link active" data-scroll-target="#ns-verfolgungsopfer-und-ihre-wohnorte-in-münchen">NS-Verfolgungsopfer und ihre Wohnorte in München</a></li>
+  <li><a href="#flucht" id="toc-flucht" class="nav-link" data-scroll-target="#flucht">Flucht</a></li>
+  <li><a href="#gedenken" id="toc-gedenken" class="nav-link" data-scroll-target="#gedenken">Gedenken</a></li>
+  <li><a href="#netzwerk" id="toc-netzwerk" class="nav-link" data-scroll-target="#netzwerk">Netzwerk</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Nationalsozialismus: Verfolgung und Gedenken</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>1937 weist Gauleiter Adolf Wagner die bayerischen Polizeipräsidenten an: „Es muss alles versucht werden, um dieses widernatürliche Laster mit allen zur Verfügung stehenden Mitteln auszurotten.” Insgesamt werden im Deutschen Reich zwischen 1933 und 1945 knapp 50.000 Männer wegen Homosexualität verurteilt. Etwa 5000 bis 6000 kommen in ein Konzentrationslager, wo sie einen rosa Winkel tragen müssen.</p>
+<p>Die Zeit des Nationalsozialismus in Deutschland zwischen 1933 und 1945 wird im Projekt <code>RemoveNA</code> in mehreren Aspekten behandelt:</p>
+<ul>
+<li><p>NS-Verfolgungsopfer und ihre Wohnorte in München</p></li>
+<li><p>Flucht</p></li>
+<li><p>Gedenkorte</p></li>
+</ul>
+<p>Ereignisse aus der <a href="forummuenchen.org/lgbtiq-chronik/">(Münchner) LGBTIQ-Chronik</a> zwischen 1933 und 1945:</p>
+<iframe style="width: 80vw; height: 50vh; border: none;" src="https://database.factgrid.de/query/embed.html#%23defaultView%3ATimeline%0ASELECT%20%3Fitem%20%3FitemLabel%20%3FDatum%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3Fitem%20wdt%3AP131%20wd%3AQ400012%20.%0A%20%20%7B%3Fitem%20%20%28wdt%3AP2%2Fwdt%3AP3%2a%29%20wd%3AQ9%20.%7D%0A%20%20UNION%20%7B%3Fitem%20%20%28wdt%3AP2%2Fwdt%3AP3%2a%29%20wd%3AQ40514.%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP106%20%3FDatum.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP49%20%3FDatum.%20%7D%0A%20%20FILTER%28%221933-01-01%22%5E%5Exsd%3AdateTime%20%3C%3D%20%3FDatum%20%26%26%20%3FDatum%20%3C%20%221946-01-01%22%5E%5Exsd%3AdateTime%29.%0A%7D" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+<p>Mit Albert Knoll ist einer der profiliertesten Historiker zur Verfolgungsgeschichte während der NS-Zeit Gründer und Vorstandes des Forums Queeres Archiv München.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mehr zum Thema: “Totgeschlagen – totgeschwiegen. Die homosexuellen Häftlinge im KZ Dachau” von Albert Knoll, herausgegeben vom Forum Queeres Archiv München. <a href="https://forummuenchen.org/publikation/albert-knoll-kz-dachau-homosexuelle-nationalsozialismus/">Hier bestellen</a></p>
+</div>
+</div>
+<section id="ns-verfolgungsopfer-und-ihre-wohnorte-in-münchen" class="level2">
+<h2 class="anchored" data-anchor-id="ns-verfolgungsopfer-und-ihre-wohnorte-in-münchen">NS-Verfolgungsopfer und ihre Wohnorte in München</h2>
+<p>130 Männer konnte Knoll identifizieren, die in München lebten und wegen des §175 inhaftiert wurden. Die Karte zeigt ihre letzten bekannten Adressen. Daneben sind für die meisten weitere Daten vorhanden, wie etwa Geburtstag und -ort, Sterbetag und -ort, Beruf oder Konfession.</p>
+<p>Sie machen den Eindrucks eines Querschnitts der Bevölkerung. Unter ihnen befinden sich Schlosser, Kellner, einige Kaufmänner, aber auch ein Opernsänger, der <a href="https://archiv.forummuenchen.org/objekt/forum-homosexualitaet-muenchen-wegen-%c2%a7175-wird-jetzt-streng/">Schauspieler Hugo Kalb-Welle</a> (<a href="https://database.factgrid.de/wiki/Item:Q419509">Factgrid</a>), ein Professor an der TU München oder Wilhelm von Braun (<a href="https://de.wikipedia.org/wiki/Wilhelm_von_Braun_(Jurist)">Wikipedia</a>, <a href="https://www.wikidata.org/wiki/Q1541806">Wikidata</a>, <a href="https://database.factgrid.de/wiki/Item:Q419470">Factgrid</a>), einem NSDAP-Mitglied, der im KZ Buchenwald als <a href="https://database.factgrid.de/query/#%23%20List%20of%20Prominent%20prisoners%20in%20Factgrid%0ASELECT%20%3Fitem%20%3FitemLabel%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3Fitem%20wdt%3AP560%20wd%3AQ221020.%0A%7D%0A">“prominenter Häftling”</a> geführt wurde.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Details zu einer Person
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Wenn du auf einen roten Punkt auf der Karte klickst, öffnet sich ein kleines Fenster - und mit einem Klick auf den Namen kommst du eine Seite mit allen Informationen zur dieser Person.</p>
+</div>
+</div>
+<iframe style="width: 80vw; height: 50vh; border: none;" src="https://database.factgrid.de/query/embed.html#%23defaultView%3AMap%0ASELECT%20%3Fitem%20%3FitemLabel%20%3FAddress%20%3FAddressLabel%20%3FGeo%20%3FinstanceofLabel%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3Fitem%20wdt%3AP131%20wd%3AQ400012.%0A%20%20%3Fitem%20wdt%3AP2%20wd%3AQ7.%0A%20%20%3Fitem%20wdt%3AP550%20wd%3AQ409833%20.%0A%20%20%3Fitem%20wdt%3AP208%20%3FAddress.%0A%20%20%3FAddress%20wdt%3AP48%20%3FGeo.%0A%7D" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+<p>Eine Tabelle mit biografischen Angaben zu diesen Männern. Nicht alle Informationen sind für alle vorhanden.</p>
+
+<iframe style="width: 80vw; height: 50vh; border: none;" src="https://database.factgrid.de/query/embed.html#%23defaultView%3ATable%0ASELECT%20%3Fitem%20%3FitemLabel%20%3Fbirth_date%20%3Fbirth_placeLabel%20%3Fdeath_date%20%3Fdeath_placeLabel%20%3FreligionLabel%20%3FcareerLabel%20%3Fnote%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3Fitem%20wdt%3AP131%20wd%3AQ400012%3B%0A%20%20%20%20wdt%3AP2%20wd%3AQ7%3B%0A%20%20%20%20wdt%3AP550%20wd%3AQ409833.%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP77%20%3Fbirth_date.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP82%20%3Fbirth_place.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP38%20%3Fdeath_date.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP168%20%3Fdeath_place.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP172%20%3Freligion.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP165%20%3Fcareer.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP73%20%3Fnote.%20%7D%0A%7D" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+<p>Zwei Männer aus dieser Tavelle, Max Ursprung und Rudolf Peters, sind zentrale Figuren im Gedenken an die Verfolgung queerer Personen in München.</p>
+<ul>
+<li><p><strong>Rudolf Peters</strong> war 1937 der erste aus München stammende Homosexuelle, der im KZ Dachau starb.</p></li>
+<li><p><strong>Max Ursprung</strong>: An der Dreimühlenstraße 28 gibt seit 2019 als offizielles Erinnerungszeichen der Stadt München eine Gedenktafel an ihn. Mehr zum Leben des Max Urspung <a href="https://www.erinnerungswerkstatt-muenchen.de/biografien/max-ursprung-rmysc-6ke69-3rkdw-9dnnr">auf der Seite der Erinnerungswerkstatt München</a>.</p></li>
+</ul>
+</section>
+<section id="flucht" class="level2">
+<h2 class="anchored" data-anchor-id="flucht">Flucht</h2>
+<p>Es ergaben sich interessante Überschneidungen als ich meine Daten, also Personen aus dem Bibliotheksbestand, der LGBTIQ*-Chronik usw., zur queeren Geschichte in Factgrid importierte. Bei fast 40 Personen, die bereits die Information zugeschrieben hatten, dass aus Deutschland in der Zeit des Nationalsozialismus flohen, haben einen Bezug zur queeren Geschichte:</p>
+<iframe style="width: 80vw; height: 50vh; border: none;" src="https://database.factgrid.de/query/embed.html#%23%20Humans%20that%20migrated%0ASELECT%20distinct%20%3Fitem%20%3FitemLabel%20%3FitemDescription%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cde%22.%20%7D%0A%20%20%3Fitem%20wdt%3AP2%20wd%3AQ7%3B%0A%20%20%20%20wdt%3AP97%20wd%3AQ400013%3B%0A%20%20%20%20wdt%3AP580%20%20_%3AanyValueP580.%0A%7D%20%0AORDER%20BY%20%3FitemLabel" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+</section>
+<section id="gedenken" class="level2">
+<h2 class="anchored" data-anchor-id="gedenken">Gedenken</h2>
+<p>Ab Mitte der 1980er entstanden Gedenkstätten vor allem in Europa, aber auch an Orten wie San Francisco, Sydney oder Montevideo. 22 solcher Gedenkorte sind mittlerweile in Wikidata hinterlegt. Fehlt eine Gedenkstätte? Dann schreib mir <a href="mailto:kontakt@katharinabrunner.de">eine Mail</a>.</p>
+<p>Eine Zeitleiste der Gedenkstätten, häufig mit Bild. Es wird deutlich: Viele nutzen den rosa Winkel als Motiv.</p>
+<iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23defaultView%3ATimeline%0ASELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3Fimage%20%3Fdate%20%3FcityLabel%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22de%22.%20%7D%0A%20%20%7B%0A%20%20%20%20SELECT%20DISTINCT%20%3Fitem%20WHERE%20%7B%0A%20%20%20%20%20%20%3Fitem%20p%3AP31%20%3Fstatement0.%0A%20%20%20%20%20%20%3Fstatement0%20%28ps%3AP31%2F%28wdt%3AP279%2a%29%29%20wd%3AQ4989906.%0A%20%20%20%20%20%20%0A%20%20%20%20%7D%0A%20%20%20%0A%20%20%7D%0A%20%20%3Fitem%20wdt%3AP547%20wd%3AQ718858.%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP18%20%3Fimage.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP571%20%3Fdate.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20wdt%3AP131%20%3Fcity.%20%7D%0A%0A%7D" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+</section>
+<section id="netzwerk" class="level2">
+<h2 class="anchored" data-anchor-id="netzwerk">Netzwerk</h2>
+<p>Alle Wikidata-Einträge, die Bezug zur Homosexualität in der Zeit des Nationalsozialismus haben:</p>
+<iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23defaultView%3AGraph%0ASELECT%20%3Fitem%20%3FitemLabel%20%3FinstanceLabel%20%3Fproperty%20%3FpropertyLabel%20%3FlocationLabel%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20BIND%28wd%3AQ718858%20AS%20%3Fvalue%29%0A%20%20%3Fitem%20%3Frelations%20%3Fvalue.%0A%20%20%3Fitem%20wdt%3AP31%20%3Finstance.%0A%20%20%3Fproperty%20wikibase%3AdirectClaim%20%3Frelations.%0A%20%20OPTIONAL%20%7B%3Fitem%20wdt%3AP131%20%3Flocation%7D%0A%7D" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

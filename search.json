@@ -1,17 +1,24 @@
 [
   {
+    "objectID": "test-person.html",
+    "href": "test-person.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "library(bsselectR)\n\nquotes <- c(\"Look deep into nature, and then you will understand everything better.\", \n            \"A fool thinks himself to be wise, but a wise man knows himself to be a fool.\", \n            \"My mission in life is not merely to survive, but to thrive; and to do so with some passion, \n            some compassion, some humor, and some style.\")\n\nquotes <- setNames(quotes, c(\"Einstein\", \"Shakespeare\", \"Angelou\"))\n\nbsselect(quotes, type = \"text\", height = 200)\n\n\n\nEinstein\nShakespeare\nAngelou\nLook deep into nature, and then you will understand everything better."
+  },
+  {
     "objectID": "tracking.html",
     "href": "tracking.html",
     "title": "Bestandsaufnahme",
     "section": "",
-    "text": "Um mit maschineller Hilfe fehlende Daten aufzuspüren, braucht es ein Positiv (den Knowledge Graph zur LGBTIQ*-Geschichte), um durch einen Abgleich mit Linked-Open-Data wie WikiData das Negativ (die Leerstellen) aufleuchten zu lassen.\nDieses Positiv ist in Factgrid gespeichert, einer Datenbank für Historiker*innen.\n\n\n\n\nAnzahl der Objekten und Verbindungen in Factgrid\n\n\n\n\n\n\n\nTyp\nAnzahl 31. Mai 2022\nAnzahl 2022-07-22\n\n\n\n\nObjekt\n7170\n7415\n\n\nVerbindungen\n34902\n38518\n\n\n\nZeichnet man alle Verbindungen, kommt man bei diesem Bild raus:"
+    "text": "Um mit maschineller Hilfe fehlende Daten aufzuspüren, braucht es ein Positiv (den Knowledge Graph zur LGBTIQ*-Geschichte), um durch einen Abgleich mit Linked-Open-Data wie WikiData das Negativ (die Leerstellen) aufleuchten zu lassen.\nDieses Positiv ist in Factgrid gespeichert, einer Datenbank für Historiker*innen.\n\n\n\n\nAnzahl der Objekten und Verbindungen in Factgrid\n\n\n\n\n\n\n\nTyp\nAnzahl 31. Mai 2022\nAnzahl 2022-07-29\n\n\n\n\nObjekt\n7170\n7415\n\n\nVerbindungen\n34902\n38523\n\n\n\nZeichnet man alle Verbindungen, kommt man bei diesem Bild raus:"
   },
   {
     "objectID": "tracking.html#lücken-auffüllen",
     "href": "tracking.html#lücken-auffüllen",
     "title": "Bestandsaufnahme",
     "section": "Lücken auffüllen",
-    "text": "Lücken auffüllen\nDas Ziel ist es ja, fehlende Daten – die NAs – zu finden und wenn möglich aufzufüllen. Die Zieldatenbank ist Wikidata. Wikidata ist der wichtigste Datenumschlagplatz in der digitalen Welt. Dort werden strukturiert Daten zu allen möglichen Konzepten, Personen, Orten und was auch immer erfasst. Diese Objekte nennt man auch Entitäten. Alle Entitäten können auch mit vielen anderen Datensätzen verknüpft werden – wie Factgrid.\nQueere Geschichte, ihre Akteure und Schauplätze, sollen also in Wikidata oder mit Wikidata verbunden werden.\nAlle Wikiprojekte führen detailliert Buch darüber, wer was wann wie verändert. Auch RemoveNA können die letzten 500 Veränderungen eingesehen werden. Diese Daten kann ich auch in eine Grafik packen:\n\n\n\n\n\n\n\n\nAls Tabelle (Stand: 2022-07-22), die letzten 500 Einträge:"
+    "text": "Lücken auffüllen\nDas Ziel ist es ja, fehlende Daten – die NAs – zu finden und wenn möglich aufzufüllen. Die Zieldatenbank ist Wikidata. Wikidata ist der wichtigste Datenumschlagplatz in der digitalen Welt. Dort werden strukturiert Daten zu allen möglichen Konzepten, Personen, Orten und was auch immer erfasst. Diese Objekte nennt man auch Entitäten. Alle Entitäten können auch mit vielen anderen Datensätzen verknüpft werden – wie Factgrid.\nQueere Geschichte, ihre Akteure und Schauplätze, sollen also in Wikidata oder mit Wikidata verbunden werden.\nAlle Wikiprojekte führen detailliert Buch darüber, wer was wann wie verändert. Auch RemoveNA können die letzten 500 Veränderungen eingesehen werden. Diese Daten kann ich auch in eine Grafik packen:\n\n\n\n\n\n\n\n\nAls Tabelle (Stand: 2022-07-29), die letzten 500 Einträge:"
   },
   {
     "objectID": "tracking.html#weiterführende-links",
@@ -46,7 +53,7 @@
     "href": "index.html#nas-removed",
     "title": "Remove NA",
     "section": "NAs removed",
-    "text": "NAs removed\n\n\n\n\n  Wikidata\n  \n    9003\n    Lücken zur queeren Geschichte in Wikidata entfernt.\n  \n   \n    Stand: 2022-07-22"
+    "text": "NAs removed\n\n\n\n\n  Wikidata\n  \n    9003\n    Lücken zur queeren Geschichte in Wikidata entfernt.\n  \n   \n    Stand: 2022-07-29"
   },
   {
     "objectID": "about.html",
@@ -60,7 +67,7 @@
     "href": "about.html#ein-positiv-um-das-negativ-aufleuchten-zu-lassen",
     "title": "Über das Projekt",
     "section": "Ein Positiv, um das Negativ, aufleuchten zu lassen",
-    "text": "Ein Positiv, um das Negativ, aufleuchten zu lassen\nUm mit maschineller Hilfe fehlende Daten aufzuspüren, braucht es ein Positiv (den Knowledge Graph zur LGBTIQ*-Geschichte), um durch einen Abgleich mit Linked-Open-Data wie GND oder WikiData das Negativ (die Leerstellen) aufleuchten zu lassen.\nDie so identifizierten Personen, Ereignisse oder Orte, die sich bisher nicht in Wikidata finden lassen, können dann in das System offener digitaler Informationen eingewebt werden, um die Vergangenheit für die Zukunft zu erhalten. Die Daten, die es dafür braucht, können auf Grund knapper Ressourcen nur mit Data Science erkämpft werden. Das möchte ich in den kommenden Monaten tun. Die Vision von „Remove NA“: LGBTIQ*-Geschichte als offene, verlinkte Daten."
+    "text": "Ein Positiv, um das Negativ, aufleuchten zu lassen\nUm mit maschineller Hilfe fehlende Daten aufzuspüren, braucht es ein Positiv (den Knowledge Graph zur LGBTIQ*-Geschichte), um durch einen Abgleich mit Linked-Open-Data wie GND oder WikiData das Negativ (die Leerstellen) aufleuchten zu lassen.\nDie so identifizierten Personen, Ereignisse oder Orte, die sich bisher nicht in Wikidata finden lassen, können dann in das System offener digitaler Informationen eingewebt werden, um die Vergangenheit für die Zukunft zu erhalten. Die Daten, die es dafür braucht, können auf Grund knapper Ressourcen nur mit Data Science erkämpft werden. Das möchte ich in den kommenden Monaten tun. Die Vision von „Remove NA”: LGBTIQ*-Geschichte als offene, verlinkte Daten."
   },
   {
     "objectID": "data-modeling.html",
@@ -103,5 +110,40 @@
     "title": "Die Weggefährt*innen",
     "section": "Erika Mann",
     "text": "Erika Mann"
+  },
+  {
+    "objectID": "nationalsozialismus.html",
+    "href": "nationalsozialismus.html",
+    "title": "Nationalsozialismus: Verfolgung und Gedenken",
+    "section": "",
+    "text": "1937 weist Gauleiter Adolf Wagner die bayerischen Polizeipräsidenten an: „Es muss alles versucht werden, um dieses widernatürliche Laster mit allen zur Verfügung stehenden Mitteln auszurotten.” Insgesamt werden im Deutschen Reich zwischen 1933 und 1945 knapp 50.000 Männer wegen Homosexualität verurteilt. Etwa 5000 bis 6000 kommen in ein Konzentrationslager, wo sie einen rosa Winkel tragen müssen.\nDie Zeit des Nationalsozialismus in Deutschland zwischen 1933 und 1945 wird im Projekt RemoveNA in mehreren Aspekten behandelt:\nEreignisse aus der (Münchner) LGBTIQ-Chronik zwischen 1933 und 1945:\nMit Albert Knoll ist einer der profiliertesten Historiker zur Verfolgungsgeschichte während der NS-Zeit Gründer und Vorstandes des Forums Queeres Archiv München."
+  },
+  {
+    "objectID": "nationalsozialismus.html#ns-verfolgungsopfer-und-ihre-wohnorte-in-münchen",
+    "href": "nationalsozialismus.html#ns-verfolgungsopfer-und-ihre-wohnorte-in-münchen",
+    "title": "Nationalsozialismus: Verfolgung und Gedenken",
+    "section": "NS-Verfolgungsopfer und ihre Wohnorte in München",
+    "text": "NS-Verfolgungsopfer und ihre Wohnorte in München\n130 Männer konnte Knoll identifizieren, die in München lebten und wegen des §175 inhaftiert wurden. Die Karte zeigt ihre letzten bekannten Adressen. Daneben sind für die meisten weitere Daten vorhanden, wie etwa Geburtstag und -ort, Sterbetag und -ort, Beruf oder Konfession.\nSie machen den Eindrucks eines Querschnitts der Bevölkerung. Unter ihnen befinden sich Schlosser, Kellner, einige Kaufmänner, aber auch ein Opernsänger, der Schauspieler Hugo Kalb-Welle (Factgrid), ein Professor an der TU München oder Wilhelm von Braun (Wikipedia, Wikidata, Factgrid), einem NSDAP-Mitglied, der im KZ Buchenwald als “prominenter Häftling” geführt wurde.\n\n\n\n\n\n\nDetails zu einer Person\n\n\n\nWenn du auf einen roten Punkt auf der Karte klickst, öffnet sich ein kleines Fenster - und mit einem Klick auf den Namen kommst du eine Seite mit allen Informationen zur dieser Person.\n\n\n\nEine Tabelle mit biografischen Angaben zu diesen Männern. Nicht alle Informationen sind für alle vorhanden.\n\n\nZwei Männer aus dieser Tavelle, Max Ursprung und Rudolf Peters, sind zentrale Figuren im Gedenken an die Verfolgung queerer Personen in München.\n\nRudolf Peters war 1937 der erste aus München stammende Homosexuelle, der im KZ Dachau starb.\nMax Ursprung: An der Dreimühlenstraße 28 gibt seit 2019 als offizielles Erinnerungszeichen der Stadt München eine Gedenktafel an ihn. Mehr zum Leben des Max Urspung auf der Seite der Erinnerungswerkstatt München."
+  },
+  {
+    "objectID": "nationalsozialismus.html#flucht",
+    "href": "nationalsozialismus.html#flucht",
+    "title": "Nationalsozialismus: Verfolgung und Gedenken",
+    "section": "Flucht",
+    "text": "Flucht\nEs ergaben sich interessante Überschneidungen als ich meine Daten, also Personen aus dem Bibliotheksbestand, der LGBTIQ*-Chronik usw., zur queeren Geschichte in Factgrid importierte. Bei fast 40 Personen, die bereits die Information zugeschrieben hatten, dass aus Deutschland in der Zeit des Nationalsozialismus flohen, haben einen Bezug zur queeren Geschichte:"
+  },
+  {
+    "objectID": "nationalsozialismus.html#gedenken",
+    "href": "nationalsozialismus.html#gedenken",
+    "title": "Nationalsozialismus: Verfolgung und Gedenken",
+    "section": "Gedenken",
+    "text": "Gedenken\nAb Mitte der 1980er entstanden Gedenkstätten vor allem in Europa, aber auch an Orten wie San Francisco, Sydney oder Montevideo. 22 solcher Gedenkorte sind mittlerweile in Wikidata hinterlegt. Fehlt eine Gedenkstätte? Dann schreib mir eine Mail.\nEine Zeitleiste der Gedenkstätten, häufig mit Bild. Es wird deutlich: Viele nutzen den rosa Winkel als Motiv."
+  },
+  {
+    "objectID": "nationalsozialismus.html#netzwerk",
+    "href": "nationalsozialismus.html#netzwerk",
+    "title": "Nationalsozialismus: Verfolgung und Gedenken",
+    "section": "Netzwerk",
+    "text": "Netzwerk\nAlle Wikidata-Einträge, die Bezug zur Homosexualität in der Zeit des Nationalsozialismus haben:"
   }
 ]
